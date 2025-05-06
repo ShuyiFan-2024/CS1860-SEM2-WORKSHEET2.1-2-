@@ -1,13 +1,13 @@
 //Initialize R2 and R3
-@R2
+@R2       
 M=0      //R2=0, suppose x is negative
-@R3
+@R3      
 M=0      //R3=0, suppose that the absolute value of x can be calculated
 
 //Read X and check if it is negative
-@R0
+@R0          
 D=M             //D=R0(x)
-@NEGATIVE
+@NEGATIVE       
 D;JLT           //if x<0, jump to NEGATIVE
 
 //Handle the case where X is a positive number
@@ -24,7 +24,7 @@ M=D           //R1=x
 @R2
 M=1         //R2=1, it indicates that x is negative
 @R0
-D=M         //D=R0=x, raad x
+D=M         //D=R0=x, read x
 @MIN_VALUE
 D;JEQ        //if x==-32768, jump to MIN_VALUE
 
